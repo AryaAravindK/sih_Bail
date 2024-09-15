@@ -1,0 +1,124 @@
+body {
+    background-color: #E0FFFF;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1, h2, h3 {
+    color: #008080;
+  }
+
+  .header{
+    border: 2px solid red;
+    padding: 10px;
+}
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  .button {
+    background-color: #008080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .button:hover {
+    background-color: #006969;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .feature {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .feature-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .feature-description {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-link {
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  .footer {
+    background-color: #008080;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }

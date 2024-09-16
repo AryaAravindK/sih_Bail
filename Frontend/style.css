@@ -181,6 +181,12 @@ a:hover {
   font-weight: bold;
 }
 
+.Bail-Reckoner{
+  border: 1px solid red;
+
+}
+
+
 .footer {
   background-color: #008080;
   color: rgb(255, 255, 255);
@@ -189,5 +195,6 @@ a:hover {
   bottom: 0;
   width: 100%;
   padding: 25px;
+  font-size: 20px;
 }
 

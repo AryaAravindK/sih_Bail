@@ -2,6 +2,7 @@
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  /* background-color: #bdece7; */
 }
 
 .header {
@@ -13,6 +14,8 @@
   position: sticky;
   top: 0px;
   left: 0px;
+  box-shadow: 0 1px 5px;
+  z-index: 1;
 }
 
 .logo {
@@ -77,11 +80,16 @@ nav a {
 }
 
 .bail-eligibility {
-  background-color: #bdece7;
-  border-radius: 10px;
+  background-color: #AFEBDF;
+  border-radius: 30px;
   padding: 20px;
   text-align: center;
   margin-bottom: 30px;
+  border: 1px solid #45BCAC;
+  width: 80vw;
+  left: 6%;
+  position: relative;
+  box-shadow: 0px 2px 3px;
 }
 
 .bail-eligibility h2 {
@@ -96,21 +104,36 @@ nav a {
   padding: 10px;
   font-size: 1rem;
   margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  border-radius: 15px;
+  border: 1px solid #45BCAC;
+  font-size: 21px;
+}
+
+.container h2{
+  text-align: center;
+  color: #0A2928;
+  font-size: 55px;
 }
 
 .btn-check {
   padding: 10px 20px;
   background-color: #287368;
-  color: #fff;
+  color: #AFEBDF;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 55px;
+  width: 250px;
 }
 
-.criteria-info {
+.criteria-info{
+
+}
+
+/* .criteria-info {
   background-color: #bdece7;
   border-radius: 10px;
   padding: 20px;
@@ -125,7 +148,7 @@ nav a {
 
 .criteria-info h3 {
   margin-bottom: 10px;
-}
+} */
 
 .steps-section {
   margin-bottom: 30px;
@@ -177,9 +200,12 @@ nav a {
 }
 
 footer {
-  background-color: #287368;
-  color: #fff;
+  background-color: #008080;
+  color: rgb(255, 255, 255);
+  padding: 10px;
   text-align: center;
-  padding: 20px;
-  font-size: 1rem;
+  bottom: 0;
+  /* width: 100vw; */
+  padding: 25px;
+  font-size: 20px;
 }

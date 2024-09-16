@@ -7,12 +7,17 @@
     
   }
   
-h1, h2, h3 {
+h1, h2 {
     color: #008080;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
+
+.container-2 h3{
+  font-size: 70px;
+}
+
 
 body{
   width: 100vw;
@@ -122,6 +127,8 @@ body{
   background-color: #006969;
 }
 
+
+
 .features {
   display: flex;
   justify-content: center;
@@ -134,14 +141,24 @@ body{
 .feature {
   background-color: #F2FBF9;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 20px;
+  padding-left: 0%;
+  padding-right: 0%;
   margin: 10px;
   width: 1000px;
   text-align: center;
   border-radius: 100px;
   height: 25px;
+  display: flex;
+  align-items: center;
+
+
 }
+
+
+
+
 
 .container h3 {
   color: #0A2928;
@@ -150,12 +167,62 @@ body{
 
 .feature-title {
   font-size: 1.2em;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 5px;
 }
+
 
 .feature-description {
   font-size: 1em;
   line-height: 1.5;
+}
+
+.feature-icon{
+  
+  max-width: 25px;
+  background-color: #006969;
+  padding: 20px;
+  border-radius: 100%;
+  
+}
+
+.title-description{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  align-items: flex-start
+
+}
+
+
+.feature:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+}
+.feature:nth-child(even) div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  margin-left: auto;
+  margin-right: 10px;
+ 
+}
+.feature:nth-child(odd) {
+  display: flex;
+  
+
+}
+.feature:nth-child(odd) div {
+  display: flex;
+  flex-direction: column;
+  
+  align-items: start;
+  
 }
 
 .header {

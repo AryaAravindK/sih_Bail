@@ -134,6 +134,7 @@ body{
 
 .button:hover {
   background-color: #006969;
+
 }
 
 
@@ -197,8 +198,11 @@ body{
   background-color: #DE7D87FF;
   padding: 20px;
   border-radius: 100%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  filter: invert();
+  box-shadow: #F5D6D7 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;  filter: invert();
+  transform: scale(1.5);
+  margin: 16px;
+  border: 3px #FF7F7F solid;
+
   
   
 }
@@ -261,6 +265,7 @@ body{
 .logo {
   display: flex;
   align-items: center;
+
 }
 
 .logo h1 {
@@ -281,6 +286,7 @@ body{
   left: 50px; */
   width: 50px;
   height: 50px;
+  border-radius: 50%;
 }
 
 .nav-links {
@@ -296,6 +302,7 @@ a {
   text-decoration: none;
   color: #0A2928;
   font-size: 25px;
+  font-weight: bold;
 }
 
 a:hover {

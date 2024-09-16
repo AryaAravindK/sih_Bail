@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    eligibility page
+{% endblock %}
+
+{% block content %}
+    <h1>
+        eligibility page
+    </h1>
+
+    <div class="container">
+        <form method='POST' action='eligibility'>
+            <label for="crime">Crime Committed:</label>
+            <input list="crime-options" id="crime" name="crime" placeholder="Type or select a crime">
+            <datalist id="crime-options">{{offences.title}}</datalist>
+            <button type="submit"></button>
+        </form>
+    </div>
+
+{% endblock %}

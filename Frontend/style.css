@@ -8,13 +8,14 @@
   }
   
 h1, h2 {
-    color: #008080;
+    color: red;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .container-2 h3{
+  color: #0a2928ff;
   font-size: 70px;
 }
 
@@ -22,34 +23,41 @@ h1, h2 {
 body{
   width: 100vw;
   height: 100vh;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .container-1 h2{
   color: #0A2928;
-  font-size: 50px;
+  font-size: 70px;
 }
 .container-1 h2 span{
   color: #45BCAC;
 }
 
 .container-1{
-  background-color: #006969;
+  background-color: #e1f7faff;
   flex-direction: column;
 
 }
 .container-2{
-  background-color: #008080;
+  background-color: #aeebdeff;
   flex-direction: column;
 
 }
 .container-3{
-  background-color: #006969;
+  background-color: #e1f7faff;
 
 }
 
-.container-3 div{
-  width: 50%;
+.container-3 div h2{
+  color: black;
+    font-size: 70px;
+    font-weight: 700;
+
+}
+
+.container-3 div p{
+  font-size: 30px;
 }
 
 .container-1,.container-2, .container-3 {
@@ -83,6 +91,7 @@ body{
   text-align: center;
   border-radius: 40px;
   border: 1px solid #45BCAC;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .card-title {
@@ -136,6 +145,7 @@ body{
   flex-wrap: wrap;
   padding: 20px;
   margin-top: 20px;
+  
 }
 
 .feature {
@@ -152,6 +162,7 @@ body{
   height: 25px;
   display: flex;
   align-items: center;
+  border: 1px #008080 solid;
 
 
 }
@@ -166,7 +177,7 @@ body{
 }
 
 .feature-title {
-  font-size: 1.2em;
+  font-size: 2em;
   margin-bottom: 0px;
   font-weight: bold;
   margin-left: 10px;
@@ -175,16 +186,20 @@ body{
 
 
 .feature-description {
-  font-size: 1em;
+  margin-left: 10px;
+  font-size: 1.25em;
   line-height: 1.5;
 }
 
 .feature-icon{
   
   max-width: 25px;
-  background-color: #006969;
+  background-color: #DE7D87FF;
   padding: 20px;
   border-radius: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  filter: invert();
+  
   
 }
 
@@ -198,12 +213,14 @@ body{
 
 
 .feature:nth-child(even) {
+  height: 60px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .feature:nth-child(even) div {
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -213,6 +230,8 @@ body{
  
 }
 .feature:nth-child(odd) {
+  height: 60px;
+
   display: flex;
   
 
@@ -234,6 +253,8 @@ body{
   position: sticky;
   top: 0px;
   left: 0px;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 

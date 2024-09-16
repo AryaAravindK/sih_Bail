@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+body{
+  width: 100vw;
+  height: 100vh;
+  /* overflow-x: hidden; */
+}
+
 .container-1 h2{
   color: #0A2928;
   font-size: 50px;
@@ -14,22 +20,30 @@
 
 .container-1{
   background-color: #006969;
+  flex-direction: column;
+
 }
 .container-2{
   background-color: #008080;
+  flex-direction: column;
+
 }
 .container-3{
   background-color: #006969;
+
+}
+
+.container-3 div{
+  width: 50%;
 }
 
 .container-1,.container-2, .container-3 {
   height:100vh;
-  width:100vw;
+  /* width:100vw; */
   
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   padding: 20px;
 
 }
@@ -142,6 +156,7 @@
   background-color: white;
   position: sticky;
   top: 0px;
+  left: 0px;
 }
 
 
@@ -207,7 +222,7 @@ a:hover {
   padding: 10px;
   text-align: center;
   bottom: 0;
-  width: 100%;
+  /* width: 100vw; */
   padding: 25px;
   font-size: 20px;
 }

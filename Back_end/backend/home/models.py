@@ -12,6 +12,6 @@ class Offences(models.Model):
     compoundable = models.BooleanField()
     
 
-    def __str__(self):
-        return f"{self.penal_code} - {self.title}"
+    # def __str__(self):
+    #     return f"{self.penal_code} - {self.title}"
     

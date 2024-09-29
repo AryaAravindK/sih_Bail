@@ -5,20 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    {% comment %} <script src="https://cdn.tailwindcss.com"></script> {% endcomment %}
     <title>
     {% block title %}
       home
     {% endblock  %}
 </title>
-
+  <link rel="stylesheet" href="{% static 'home/style.css' %}">
   {% block links %}{% endblock %}
+
+
 </head>
 <body>
   
+  <nav class="header">
+    <div class="logo">
+        <img src="{% static 'Assets/logo.png' %}" alt="Bail Reckoner Logo" class="logo-image">
+        <h1>Bail Reckoner</h1>
+    </div>
+        <ul class="nav-links">
+            <li class="nav-link"><a href="{% url 'home'%}">Home</a></li>
+            <li class="nav-link"><a href="#">About</a></li>
+            <li class="nav-link"><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+
     {% block content %}
     <h1>Home Page</h1>
     {% endblock %}
+
+
     
 </body>
 </html>

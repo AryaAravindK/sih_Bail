@@ -1,0 +1,233 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #bdece7; */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0 1px 5px;
+    z-index: 1;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo h1 {
+    background-color: white;
+    color: #0A2928;
+    /* position: relative;
+      left: 90px; */
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .logo-image {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: #FFFFFF;
+    /* position: absolute;
+      left: 50px; */
+    width: 50px;
+    height: 50px;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: #FFFFFF;
+  }
+  
+  .nav-link {
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #0A2928;
+    font-size: 25px;
+  }
+  
+  a:hover {
+    font-weight: bolder;
+    transition: 300ms;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #1b1b1b;
+    font-weight: 700;
+    margin-left: 20px;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .bail-eligibility {
+    background-color: #AFEBDF;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border: 1px solid #45BCAC;
+    width: 80vw;
+    left: 6%;
+    position: relative;
+    box-shadow: 0px 2px 3px;
+  }
+  
+  .bail-eligibility h2 {
+    font-size: 2rem;
+    color: #1b1b1b;
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid #45BCAC;
+    font-size: 21px;
+  }
+  
+  .container h2{
+    text-align: center;
+    color: #0A2928;
+    font-size: 55px;
+  }
+  
+  .btn-check {
+    padding: 10px 20px;
+    background-color: #287368;
+    color: #AFEBDF;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 55px;
+    width: 250px;
+  }
+  
+  
+  .criteria-info-container{
+    background-color: #AFEBDF;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border: 1px solid #45BCAC;
+    width: 80vw;
+    left: 6%;
+    position: relative;
+    box-shadow: 0px 2px 3px;
+    text-align: left;
+    height: auto;
+  
+  }
+  
+  .criteria-info-container h3{
+    display: flex;
+    padding: 0 0 6px 25px;
+  }
+  
+   .criteria-info h2{
+    font-size: 50px;
+  }
+  
+  
+  .steps-section {
+    margin-bottom: 30px;
+  }
+  
+  .step {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 5px #1b1b1b;
+    border-radius: 45px;
+    border: 1px solid #45BCAC;
+    padding-right: 25px;
+    margin: 20px;
+    padding: 15px;
+  }
+  
+  .step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #287368;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    margin-right: 20px;
+  }
+  
+  .step-text {
+    flex-grow: 1;
+    font-size: 1rem;
+  }
+  
+  .btn-view {
+    padding: 10px 20px;
+    background-color: #287368;
+    color: #8fdcd2;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 55px;
+    width: 155px;
+    box-shadow: 0 2px 10px #287368;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  footer {
+    background-color: #008080;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    /* width: 100vw; */
+    padding: 25px;
+    font-size: 20px;
+  }
+  
+
+  #mesg{
+    padding: 10px;
+    margin:10px;
+    background-color: #008080;
+    border-radius: 10px;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+  }

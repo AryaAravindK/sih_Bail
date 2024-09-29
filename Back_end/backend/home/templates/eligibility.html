@@ -82,6 +82,7 @@
             </div>
             <div>
               <h3>Description</h3>
+              <p>:Description yet to be added</p>
             </div>
             <div>
               <h3>Maximum Penalty</h3>
@@ -94,6 +95,11 @@
             </div>
             <div>
               <h3>Bailable</h3>
+              {% if info.bailable %}
+                <p>The offence commited it a Bailable offeces</p>
+              {% else %}
+              <p>The offence commited it a Non-Bailable offeces</p>
+                {% endif %}
 
             </div>
             <div>

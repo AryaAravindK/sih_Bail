@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bail Reckoner</title>
+    <title>Grid Layout</title>
     <link rel="stylesheet" href="Judicial Autorities.css">
 </head>
+
 <body>
     <nav class="header">
         <div class="logo">
@@ -18,75 +20,98 @@
             <li class="nav-link"><a href="#">Contact us</a></li>
         </ul>
     </nav>
-
     <div class="container">
-        <main>
-            <h2>Enter Details</h2>
+        <div class="left-column">
+            <h2><center>Enter Details</center></h2>
             <form id="bailForm">
-                <label for="offense">Nature of Offense</label>
-                <select id="offense">
-                    <option value="Assault">Assault</option>
-                    <!-- Add more offenses as needed -->
-                </select>
+                <div>
+                    <label for="offense">Nature of Offense</label>
+                    <select id="offense">
+                        <option value="Assault">Assault</option>
+                        <!-- Add more offenses as needed -->
+                    </select>
+                </div>
 
-                <label for="criminalRecord">Past Criminal Record</label>
-                <select id="criminalRecord">
-                    <option value="1">1</option>
-                    <!-- More options -->
-                </select>
+                <div>
+                    <label for="criminalRecord">Past Criminal Record</label>
+                    <select id="criminalRecord">
+                        <option value="1">1</option>
+                        <!-- More options -->
+                    </select>
+                </div>
 
-                <label for="evidenceRating">Rating of Evidence in Favor (0-10):</label>
-                <select id="evidenceRating">
-                    <option value="3">3</option>
-                    <!-- More options -->
-                </select>
+                <div>
+                    <label for="evidenceRating">Rating of Evidence in Favor (0-10):</label>
+                    <select id="evidenceRating">
+                        <option value="3">3</option>
+                        <!-- More options -->
+                    </select>
+                </div>
 
-                <label for="visa">Has Visa/Passport:</label>
-                <select id="visa">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                </select>
+                <div>
+                    <label for="visa">Has Visa/Passport:</label>
+                    <select id="visa">
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+                </div>
 
-                <label for="foreignTies">Strong Foreign Country Ties:</label>
-                <select id="foreignTies">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                </select>
+                <div>
+                    <label for="foreignTies">Strong Foreign Country Ties:</label>
+                    <select id="foreignTies">
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+                </div>
 
-                <h3>Personal Circumstances</h3>
-                <label for="age">Age:</label>
-                <input type="number" id="age" value="30">
+                <div class="personal-info">
+                    <h3>Personal Circumstances</h3>
+                    <div>
 
-                <label for="gender">Gender:</label>
-                <select id="gender">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <!-- More options -->
-                </select>
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" value="30">
+                    </div>
 
-                <label for="medical">Medical Condition:</label>
-                <select id="medical">
-                    <option value="None">None</option>
-                    <!-- More conditions -->
-                </select>
+                    <div>
+                        <label for="gender">Gender:</label>
+                        <select id="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <!-- More options -->
+                        </select>
+                    </div>
 
+                    <div>
+                        <label for="medical">Medical Condition:</label>
+                        <select id="medical">
+                            <option value="None">None</option>
+                            <!-- More conditions -->
+                        </select>
+                    </div>
+
+
+                </div>
                 <button type="submit">Submit</button>
             </form>
+        </div>
 
-            <div id="result">
-                <h3>Eligible for Bail: <span id="bailEligibility">YES</span></h3>
-                <div class="precedents">
-                    <h4>Judicial Precedents</h4>
-                    <p><strong>Sections of Law:</strong> Criminal Conspiracy - Section 120B IPC</p>
-                    <p><strong>Reason for bail:</strong> The court granted bail, recognizing that while the seriousness of the charges is a factor, it is not the sole determinant...</p>
-                    <p><strong>Bail granted:</strong> YES</p>
-                    <p><strong>Conclusion:</strong> The court ordered their release on bail under stringent conditions...</p>
-                    <p><strong>Source:</strong> <a href="https://indiankanoon.org/doc/155274324/" target="_blank">https://indiankanoon.org/doc/155274324/</a></p>
-                </div>
+
+        <div class="right-column">
+            <div class="top-row">
+                <h2>
+                    <center>Result</center>
+                </h2>
+                <p>This is the top row in the right column.</p>
             </div>
-        </main>
+            <div class="bottom-row">
+                <h2>Similar Cases</h2>
+                <p>This is the bottom row in the right column.</p>
+            </div>
+        </div>
     </div>
-
-    <script src="scripts.js"></script>
+    <footer class="footer">
+        <span>Copyrights reserved by @ 2024 TeamNirvana</span>
+    </footer>
 </body>
+
 </html>

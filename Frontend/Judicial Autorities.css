@@ -17,7 +17,6 @@
     left: 0px;
     box-shadow: 0 1px 5px;
     z-index: 1;
-
 }
 
 .logo {
@@ -78,31 +77,59 @@ nav a {
 }
 
 .container {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-main {
-    background-color: #b4e0d8;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-h2, h3 {
-    color: #00796b;
-}
-
-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    /* Two equal columns */
+    grid-template-rows: auto;
+    /* First column takes up the full height */
     gap: 10px;
+    /* Optional: Gap between grid items */
 }
 
-form label {
-    grid-column: 1 / span 2;
+.left-column {
+    grid-column: 1 / 2;
+    /* Left column */
+    background-color: #f0f0f0;
+    padding: 20px;
+    height: 85vh;
+    background-color:#AFEBDF;
+    border: 1px Solid #45BCAC;
+    border-radius: 5px;
+}
+
+.right-column {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    /* Two equal rows inside right column */
+    grid-column: 2 / 3;
+    /* Right column */
+}
+
+.right-column .top-row,
+.right-column .bottom-row {
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #008080;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    /* width: 100vw; */
+    padding: 25px;
+    font-size: 20px;
+}
+
+
+form div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0fr 0fr;
+    gap: 10px;
+    row-gap: 25px;
 }
 
 form input, form select {
@@ -113,41 +140,32 @@ form input, form select {
 
 button {
     grid-column: 1 / span 2;
-    padding: 10px;
+    padding: 15px;
     background-color: #00796b;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 0px;
+    width: 100%;
+    font-size: 1.2rem;
 }
 
 button:hover {
     background-color: #005a4a;
 }
-
-#result {
-    margin-top: 20px;
+.personal-info{
+    display: block;
 }
 
-#bailEligibility {
-    color: green;
+.personal-info h3{
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
 }
 
-.precedents {
-    background-color: #c1f0f4;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.precedents p {
-    margin: 5px 0;
-}
-
-.precedents a {
-    color: #00796b;
-    text-decoration: none;
-}
-
-.precedents a:hover {
-    text-decoration: underline;
+.left-column h2{
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
 }

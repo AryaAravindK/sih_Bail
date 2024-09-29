@@ -321,12 +321,13 @@ border: 1px solid red;
 }
 
 .footer {
-background-color: #218278ff;
-color: rgb(255, 255, 255);
-padding: 10px;
-text-align: center;
-bottom: 0;
-/* width: 100vw; */
-padding: 25px;
-font-size: 20px;
+  background-color: #218278ff;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+  bottom: 0;
+  /* width: 100vw; */
+  padding: 25px;
+  font-size: 20px;
 }
+

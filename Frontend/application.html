@@ -56,7 +56,7 @@
 
         <div class="FormPreview">
             <!-- Personal Details -->
-            <div id="content1" class="content" style="display: none;">
+            <div id="content1" class="content">
                 <P>IN THE COURT OF THE </P>
                 <p class="CourtName"></p>
                 <P>Case Number </P>
@@ -123,7 +123,6 @@
                 <p>&emsp; &emsp;WHEREFORE, the accused prays that this Hon'ble Court be pleased to enlarged the accused
                     on bail, in the interest of justice and equity.</p>
             </div>
-
         </div>
     </div>
     <script>
@@ -140,15 +139,15 @@
                 content2.style.display = "block";
             }
         }
-        const CName = document.getElementById('CName');
+        const CName = document.getElementByCl('CName');
         const Con = document.getElementById('Con');
         const Cfrom = document.getElementById('Cfrom');
         const CCNo = document.getElementById('CCNo');
 
-        const CCNO = document.getElementById('CCNO');
-        const CourtName = document.getElementById('CourtName');
-        const CFROM = document.getElementById('CFROM');
-        const CTO = document.getElementById('CTO');
+        const CCNO = document.getElementsByClassName('CCNO');
+        const CourtName = document.getElementsByClassName('CourtName');
+        const CFROM = document.getElementsByClassName('CFROM');
+        const CTO = document.getElementsByClassName('CTO');
 
         const btn = document.getElementById('btn');
         function fun1(e) {

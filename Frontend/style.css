@@ -57,7 +57,8 @@ color: black;
 }
 
 .container-3 div p{
-font-size: 30px;
+  font-size: 30px;
+  font-weight: 500;
 }
 
 .container-1,.container-2, .container-3 {

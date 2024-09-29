@@ -1,21 +1,152 @@
 {% extends "layout.html" %}
-
+{% load static %}
 {% block title %}
     eligibility page
 {% endblock %}
+ {% block links %}
+ <link rel="stylesheet" href="{% static 'eli/eligibility.css' %}">
+
+ {% endblock %}
 
 {% block content %}
-    <h1>
+    {% comment %} <h1>
         eligibility page
     </h1>
 
-    <div class="container">
-        <form method='POST' action='eligibility'>
-            <label for="crime">Crime Committed:</label>
+    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4  ">
+        <form method='POST' >
+            {% csrf_token %}
+            <label for="crime" >Crime Committed:</label>
             <input list="crime-options" id="crime" name="crime" placeholder="Type or select a crime">
             <datalist id="crime-options">{{offences.title}}</datalist>
-            <button type="submit"></button>
+            <button type="submit" class="p-6 m-4">submit</button>
+
         </form>
-    </div>
+
+        {% for message in messages %}
+        
+
+        {{message}}
+    
+        {% endfor %}
+
+    </div> {% endcomment %}
+
+    <div class="container">
+        <h2>Bail Eligibility</h2>
+        <section class="bail-eligibility">
+            <form method='POST' >
+                {% csrf_token %}
+            <label for="crime" >Crime Committed:</label>
+            <input list="crime-options" id="crime" name="crime" placeholder="Type or select a crime" class="form-control">
+            
+            <datalist id="crime-options">
+              {% for offence in offences %}
+              <option value="{{offence.title}}"> {{offence.title}} </option>
+              {% endfor %}
+            </datalist>
+            
+            
+          <label for="">Imprisonment already served</label>
+
+          <select class="form-control" >
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+
+          </select>
+          <button type="submit" class="btn-check p-6 m-4">submit</button>
+        </form>
+
+        {% for message in messages %}
+        
+        <p id="mesg">
+            {{message}}
+            
+        </p>
+    
+        {% endfor %}
+
+        </section>
+    
+        <div class="criteria-info">
+          <h2>
+            Bail Criteria and Offense Information
+          </h2>
+          <div class="criteria-info-container">
+            <div>
+              <h3>IPC Section</h3>
+              <p>:{{user_info.penal_code}}</p>
+            </div>
+            <div>
+              <h3>Description</h3>
+            </div>
+            <div>
+              <h3>Maximum Penalty</h3>
+              {{user_info.max_penalty}}
+            </div>
+            <div>
+              <h3>Minimum Penalty</h3>
+              {{info.min_penalty}}
+
+            </div>
+            <div>
+              <h3>Bailable</h3>
+
+            </div>
+            <div>
+              <h3>Compoundable</h3>
+            </div>
+            <div>
+              <h3>Bail Eligibility</h3>
+            </div>
+          </div>
+        </div>
+    
+        <div class="steps-section">
+          <h2>Further Steps</h2>
+    
+            <div class="step">
+              <div class="step-circle">1</div>
+              <div class="step-text">
+                <strong>Hire a Lawyer</strong>
+                <p>Engage a lawyer to prepare and file the bail application.</p>
+              </div>
+              <button class="btn-view"><a href="https://lawrato.com/">View</a></button>
+            </div>
+    
+            <div class="step">
+              <div class="step-circle">2</div>
+              <div class="step-text">
+                <strong>Draft and File the Application</strong>
+                <p>Your lawyer drafts the bail application with details of the offense and reasons for seeking bail. File it
+                  in the appropriate court.</p>
+              </div>
+              <button class="btn-view"><a href="{% url 'working'%}">View</a></button>
+            </div>
+    
+            <div class="step">
+              <div class="step-circle">3</div>
+              <div class="step-text">
+                <strong>Court Hearing</strong>
+                <p>Attend the hearing where the court reviews arguments from both the defense and prosecution.</p>
+              </div>
+              <button class="btn-view"><a href="https://lawrato.com/">View</a></button>
+            </div>
+    
+            <div class="step">
+              <div class="step-circle">4</div>
+              <div class="step-text">
+                <strong>Furnish Bail Bond</strong>
+                <p>If bail is granted, provide the required bail bond or surety and comply with any court conditions for
+                  release.</p>
+              </div>
+              <button class="btn-view"><a href="{% url 'working'%}">View</a></button>
+            </div>
+            </section>
+          </div>
+        </div>
 
 {% endblock %}

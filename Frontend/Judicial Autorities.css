@@ -161,7 +161,7 @@ button:hover {
     border: 1px solid #45BCAC;
     border-radius: 5px;
     padding: 20px;
-    height: 680px;
+    height: 720px;
 }
 
 .right-column {
@@ -269,3 +269,13 @@ button:hover {
 .card:nth-child(5) {
     transition-delay: 1s;
 }
+
+
+#result p{
+    font-size: 23px;
+    text-align: left;
+    padding-left: 15px;
+    font-weight: bold;
+    padding:10px;
+}
+

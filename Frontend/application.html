@@ -29,48 +29,51 @@
                 <div class="Input-details">
                     <div>
                         <label for="CName">Court Name</label>
-                        <input id="CName" required>
+                        <input id="CName" >
                     </div>
                     <div>
                         <label for="CCNo">Case Number</label>
-                        <input id="CCNo" required >
+                        <input id="CCNo"  >
                     </div>
                     <div>
                         <label for="Cfrom">Case From</label>
-                        <input type="text" id="Cfrom" required></input>
+                        <input type="text" id="Cfrom" ></input>
                     </div>
                     <div>
                         <label for="Con">Case On</label>
-                        <input height="100px" type="text" id="Con" required></input>
+                        <input height="100px" type="text" id="Con" ></input>
                     </div>
                 </div>
-                <div><button class="Save" type="Submit">Save</button></div>
+                <div><button class="Save" id="btn" type="Submit">Save</button></div>
             </form>
         </div>
 
         <div class="FormPreview">
             <!-- Personal Details -->
             <P>IN THE COURT OF THE </P>
-            <p>THE COURT DETAILS</p>
+            <p id="CourtName"></p>
             <P>Case Number </P>
+            <P id="CCNO"> </P>
             <p><B>COMPLAIANAT;</B></p>
-            <P>From <b>V/S</b> To </P>
+            <P id="CFROM" ></P>
+            <P><b>V/S</b></P>
+            <P id="CTO"></P>
             <p><b>ACCUSED;</b></p>
             <p><b>APPLICATION UNDER SECTION 436 OF THE CODE OF CRIMINAL PROCEDURE</b></p>
             <p>The above named accused submits as follows:-</p>
-            <p>1. The complaianat has filed a case against the accused for alleged offence punishable under section
+            <p>1.  &emsp; The complaianat has filed a case against the accused for alleged offence punishable under section
                 (SECTION NUMBER)</p>
-            <p>2 The accused submits that the said offence is bailable in nature and the accused is totally innocent of
+            <p>2.  &emsp; The accused submits that the said offence is bailable in nature and the accused is totally innocent of
                 the alleged offence.</p>
-            <p>3. The alleged offences are baiable and compoundable in nature, neither punishable with death or life
+            <p>3.  &emsp; The alleged offences are baiable and compoundable in nature, neither punishable with death or life
                 imprisonment, the cash security be furnished in the event of release of the accused by this Hon'ble
                 court (COURT NAME) </p>
-            <p>5. The accused is innocent of the said alleged offence and has got valid and tenable defence.</p>
-            <p>6. That the accused person is ready and willing to furnish a cash surety/surety to the satisfaction of
+            <p>5. &emsp; The accused is innocent of the said alleged offence and has got valid and tenable defence.</p>
+            <p>6. &emsp;That the accused person is ready and willing to furnish a cash surety/surety to the satisfaction of
                 this Hon,ble court to ensure his appearance and is willing to abide by any of the conditions imposed by
                 this Hon,ble court.</p>
-            <p>7. The accused undertakes to appear before this Hon'ble court as and when directed to do so..</p>
-            <p>8. The accused is having permanent abode peace lovng citizen and have deep roots in the society, to do
+            <p>7. &emsp; The accused undertakes to appear before this Hon'ble court as and when directed to do so..</p>
+            <p>8. &emsp; The accused is having permanent abode peace lovng citizen and have deep roots in the society, to do
                 have bad antecedents.</p>
             <p>WHEREFORE, the accused prays that this Hon,ble court may be pleased to allow the application and released
                 the accused persons on bail, in the above said case, in the interest of justice.</p>
@@ -79,10 +82,25 @@
         </div>
     </div>
     <script>
-        const CName=document.getElementById('CName')
-        const CCNo=document.getElementById('CCNo')
-        const Cfrom=document.getElementById('Cfrom')
-        const Con=document.getElementById('Con')
+        const CName=document.getElementById('CName');
+        const Con=document.getElementById('Con');
+        const Cfrom=document.getElementById('Cfrom');
+        const CCNo=document.getElementById('CCNo');
+
+        const CCNO=document.getElementById('CCNO');
+        const CourtName=document.getElementById('CourtName');
+        const CFROM=document.getElementById('CFROM');
+        const CTO=document.getElementById('CTO');
+
+        const btn=document.getElementById('btn');
+        function fun1(e){
+            e.preventDefault();
+            CourtName.innerHTML = CName.value;
+            CCNO.innerHTML=CCNo.value;
+            CFROM.innerHTML=Cfrom.value;
+            CTO.innerHTML=Con.value;
+        }
+        btn.addEventListener('click',fun1);
     </script>
 </body>
 

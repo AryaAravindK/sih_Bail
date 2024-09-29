@@ -333,7 +333,26 @@ a:hover {
   font-size: 20px;
 }
 
-.new{
-margin: 100px;
-padding: 100px;
+.Chatbot{
+  background-color: rgb(164, 0, 0);
+  
+
+  .Chatbot{
+    position: fixed ;
+    top:90%;
+    left:90%;
+    transform:translate(50%,50%);
+    border-radius:50%;
+
+    padding:1px;
+    margin:1px;
+    background-color:red;
+    height:70px;
+    width: 70px;
+  }
+
+  .Chatbot:hover{
+    height:100px;
+    background-color:rgba(150, 0, 0, 0.716);
+  }
 }

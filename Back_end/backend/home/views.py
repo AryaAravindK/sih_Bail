@@ -40,4 +40,7 @@ def eligibility(request):
     
 def working(request):
     return render(request,'underProcess.html')
+
+def test(request):
+    return render(request,"test.html")
                

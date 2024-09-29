@@ -93,8 +93,8 @@
             </div>
             <div>
               <h3>Bailable</h3>
-              {% if info %}
-                {% if info.bailable %}
+              {% if user_info %}
+                {% if user_info.bailable %}
                   <p>:The offence commited it a Bailable offeces</p>
                 {% else %}
                 <p>:The offence commited it a Non-Bailable offeces</p>
@@ -105,8 +105,8 @@
             </div>
             <div>
               <h3>Compoundable</h3>
-              {% if info %}
-                {% if info.compoundable %}
+              {% if user_info %}
+                {% if user_info.compoundable %}
                   <p>:The offence commited it a compoundable offeces</p>
                 {% else %}
                   <p>:The offence commited it a Non-compoundable offeces</p>
@@ -119,8 +119,8 @@
             </div>
             <div>
               <h3>Bail Eligibility</h3>
-              {% if info %}
-                {% if info.bailable %}
+              {% if user_info %}
+                {% if user_info.bailable %}
                   <p>:You are eligible to apply for Bail</p>
                 {% else %}
                 <p>:You are not eligible to apply for Bail</p>
@@ -175,5 +175,7 @@
             </section>
           </div>
         </div>
+
+        <div class="test">testing</div>
 
 {% endblock %}

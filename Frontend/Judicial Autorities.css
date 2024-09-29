@@ -150,9 +150,10 @@ button:hover {
     display: grid;
     grid-template-columns: 1fr 0.9fr; 
     gap: 10px;
-    height: 86vh;
+    height: 130vh;
     padding: 20px;
-    background-color: #F2FBF9;
+    /* background-color: #F2FBF9; */
+    background-color: red;
 }
 
 .left-column {
@@ -161,7 +162,9 @@ button:hover {
     border: 1px solid #45BCAC;
     border-radius: 5px;
     padding: 20px;
-    height: 720px;
+    height: 730px;
+    border-radius: 10px;
+
 }
 
 .right-column {
@@ -181,9 +184,12 @@ button:hover {
     padding: 20px;
     background-color: #AFEBDF;
     border: 1px solid #45BCAC;
-    height: 20vh;
+    height: auto;
     top: -16px;
     position: relative;
+    border-radius: 10px;
+
+
 }
 .top-row h2{
     font-size: 35px;
@@ -195,8 +201,9 @@ button:hover {
     background-color: #AFEBDF;
     border: 1px solid #45BCAC;
     padding: 20px;
-    height: 700px;
+    height: auto;
     text-align: center;
+    border-radius: 10px;
 }
 
 .bottom-row h2{

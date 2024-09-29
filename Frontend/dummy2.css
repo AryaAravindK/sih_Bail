@@ -87,10 +87,15 @@ nav a {
 footer {
     background-color: #008080;
     color: rgb(255, 255, 255);
-    padding: 25px;
+    padding: 10px;
     text-align: center;
+    bottom: 0;
+    /* width: 100vw; */
+    padding: 25px;
     font-size: 20px;
-    margin-top: auto;
+    margin-bottom: 0px;
+    position: absolute;
+    width: 100%;
 }
 
 
@@ -161,7 +166,7 @@ button:hover {
     border: 1px solid #45BCAC;
     border-radius: 5px;
     padding: 20px;
-    height: 720px;
+    height: 680px;
 }
 
 .right-column {
@@ -269,13 +274,3 @@ button:hover {
 .card:nth-child(5) {
     transition-delay: 1s;
 }
-
-
-#result p{
-    font-size: 23px;
-    text-align: left;
-    padding-left: 15px;
-    font-weight: bold;
-    padding:10px;
-}
-

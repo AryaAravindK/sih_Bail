@@ -135,22 +135,25 @@ button:hover {
     text-align: center;
     padding: 15px;
     font-weight: bold;
+    font-size: 30px;
+    color: #0A2928;
 }
+
 
 .left-column h2{
     text-align: center;
     padding: 15px;
     font-weight: bold;
+    font-size: 35px;
+    color: #0A2928;
 }
-
-
 
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 0.9fr; /* Two columns */
+    grid-template-columns: 1fr 0.9fr; 
     gap: 10px;
-    height: 88vh;
+    height: 86vh;
     padding: 20px;
     background-color: #F2FBF9;
 }
@@ -161,7 +164,7 @@ button:hover {
     border: 1px solid #45BCAC;
     border-radius: 5px;
     padding: 20px;
-    height: 50vh;
+    height: 680px;
 }
 
 .right-column {
@@ -169,8 +172,8 @@ button:hover {
     grid-template-rows: 1fr 1.5fr; 
     grid-column: 2 / 30;
     gap: 20px;
-    background-color: #AFEBDF;
-    border: 1px solid #45BCAC;
+    /* background-color: #AFEBDF;
+    border: 1px solid #45BCAC; */
     border-radius: 5px;
     padding: 20px;
     height: 80vh;
@@ -179,20 +182,27 @@ button:hover {
 
 .top-row {
     padding: 20px;
-    background-color: #e0e0e0;
+    background-color: #AFEBDF;
+    border: 1px solid #45BCAC;
     height: 20vh;
+    top: -16px;
+    position: relative;
+}
+.top-row h2{
+    font-size: 35px;
+    color: #0A2928;
 }
 
+
 .bottom-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #e0e0e0;
+    background-color: #AFEBDF;
+    border: 1px solid #45BCAC;
     padding: 20px;
-    height: 50vh;
+    height: 700px;
     text-align: center;
 }
+
 .bottom-row h2{
-    text-align: center;
-    margin: 0 0 0 auto;
+    font-size: 35px;
+    color: #0A2928;
 }

@@ -10,13 +10,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
     background-color: white;
     position: sticky;
     top: 0px;
     left: 0px;
     box-shadow: 0 1px 5px;
     z-index: 1;
+    margin-bottom: 0px;
 
 }
 
@@ -81,16 +82,28 @@ nav a {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
+    padding: px;
 }
 
-main {
+ main   {
     background-color: #b4e0d8;
-    padding: 20px;
+    padding: 8px;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 0px;
 }
-
+main h2{
+    display: flex;
+    justify-content: center;
+    color: #0A2928;
+    background-color: #c1f0f4;
+    margin-top: 0px;
+    height: 50px;
+    padding: 0;
+    
+    align-items: center;
+    margin-bottom: 8px;
+    
+}
 h2, h3 {
     color: #00796b;
 }
@@ -119,6 +132,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 0px;
 }
 
 button:hover {
@@ -130,24 +144,42 @@ button:hover {
 }
 
 #bailEligibility {
-    color: green;
+    color: black;
+    display: flex;
 }
 
 .precedents {
-    background-color: #c1f0f4;
     padding: 10px;
     border-radius: 5px;
 }
 
-.precedents p {
+.precedents p ~strong{
+    text-align: justify;
     margin: 5px 0;
+}
+.precedents h4{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
 }
 
 .precedents a {
     color: #00796b;
     text-decoration: none;
+    font-size: 18px;
 }
 
 .precedents a:hover {
     text-decoration: underline;
 }
+#result h3{
+    display: flex;
+    justify-content: center;
+    color: #0A2928;
+    background-color: #c1f0f4 ;
+    height: 30px;
+    padding:10px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+

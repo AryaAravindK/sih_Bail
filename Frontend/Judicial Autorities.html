@@ -22,7 +22,9 @@
     </nav>
     <div class="container">
         <div class="left-column">
-            <h2><center>Enter Details</center></h2>
+            <h2>
+                <center>Enter Details</center>
+            </h2>
             <form id="bailForm">
                 <div>
                     <label for="offense">Nature of Offense</label>
@@ -101,18 +103,52 @@
                 <h2>
                     <center>Result</center>
                 </h2>
-                <p>This is the top row in the right column.</p>
+                <div>
+                    <p>Decision</p>
+                    <p>Probablity of Bail</p>
+                    <p>Reason</p>
+                </div>
             </div>
+
             <div class="bottom-row">
-                <h2>Similar Cases</h2>
-                <p>This is the bottom row in the right column.</p>
-                <p>Lorem, ipsum dolor sit amet 
+                <h2>
+                    Similar Cases
+                </h2>
+                <button class="dropdown-btn" onclick="toggleDropdown()">Show Cards</button>
+                <div class="dropdown-content" id="dropdown-content">
+                    <div class="card">
+                        <h3>Card 1</h3>
+                        <p>This is card 1 content.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Card 2</h3>
+                        <p>This is card 2 content.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Card 3</h3>
+                        <p>This is card 3 content.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Card 4</h3>
+                        <p>This is card 4 content.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Card 5</h3>
+                        <p>This is card 5 content.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <footer class="footer">
         <span>Copyrights reserved by @ 2024 TeamNirvana</span>
     </footer>
+    <script>
+        function toggleDropdown() {
+            const dropdownContent = document.getElementById('dropdown-content');
+            dropdownContent.classList.toggle('open');
+        }
+    </script>
 </body>
 
 </html>

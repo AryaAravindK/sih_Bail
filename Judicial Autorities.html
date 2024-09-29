@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bail Reckoner</title>
+    <link rel="stylesheet" href="Judicial Autorities.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navbar">
+                <h1>Bail Reckoner</h1>
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact us</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <h2>Enter Details</h2>
+            <form id="bailForm">
+                <label for="offense">Nature of Offense</label>
+                <select id="offense">
+                    <option value="Assault">Assault</option>
+                    <!-- Add more offenses as needed -->
+                </select>
+
+                <label for="criminalRecord">Past Criminal Record</label>
+                <select id="criminalRecord">
+                    <option value="1">1</option>
+                    <!-- More options -->
+                </select>
+
+                <label for="evidenceRating">Rating of Evidence in Favor (0-10):</label>
+                <select id="evidenceRating">
+                    <option value="3">3</option>
+                    <!-- More options -->
+                </select>
+
+                <label for="visa">Has Visa/Passport:</label>
+                <select id="visa">
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+
+                <label for="foreignTies">Strong Foreign Country Ties:</label>
+                <select id="foreignTies">
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+
+                <h3>Personal Circumstances</h3>
+                <label for="age">Age:</label>
+                <input type="number" id="age" value="30">
+
+                <label for="gender">Gender:</label>
+                <select id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <!-- More options -->
+                </select>
+
+                <label for="medical">Medical Condition:</label>
+                <select id="medical">
+                    <option value="None">None</option>
+                    <!-- More conditions -->
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="result">
+                <h3>Eligible for Bail: <span id="bailEligibility">YES</span></h3>
+                <div class="precedents">
+                    <h4>Judicial Precedents</h4>
+                    <p><strong>Sections of Law:</strong> Criminal Conspiracy - Section 120B IPC</p>
+                    <p><strong>Reason for bail:</strong> The court granted bail, recognizing that while the seriousness of the charges is a factor, it is not the sole determinant...</p>
+                    <p><strong>Bail granted:</strong> YES</p>
+                    <p><strong>Conclusion:</strong> The court ordered their release on bail under stringent conditions...</p>
+                    <p><strong>Source:</strong> <a href="https://indiankanoon.org/doc/155274324/" target="_blank">https://indiankanoon.org/doc/155274324/</a></p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #c1f0f4;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.navbar h1 {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.navbar a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+}
+
+main {
+    background-color: #b4e0d8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+h2, h3 {
+    color: #00796b;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+form label {
+    grid-column: 1 / span 2;
+}
+
+form input, form select {
+    padding: 10px;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+}
+
+button {
+    grid-column: 1 / span 2;
+    padding: 10px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005a4a;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#bailEligibility {
+    color: green;
+}
+
+.precedents {
+    background-color: #c1f0f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.precedents p {
+    margin: 5px 0;
+}
+
+.precedents a {
+    color: #00796b;
+    text-decoration: none;
+}
+
+.precedents a:hover {
+    text-decoration: underline;
+}

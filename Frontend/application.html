@@ -27,21 +27,27 @@
             <h2>Details</h2>
             <form>
                 <div class="Input-details">
+                    <label>
+                        <input type="radio" name="content" value="option1" onclick="toggleContent()" checked> Bailable
+                    </label>
+                    <label>
+                        <input type="radio" name="content" value="option2" onclick="toggleContent()"> Non - Bailable
+                    </label>
                     <div>
                         <label for="CName">Court Name</label>
-                        <input id="CName" >
+                        <input id="CName">
                     </div>
                     <div>
                         <label for="CCNo">Case Number</label>
-                        <input id="CCNo"  >
+                        <input id="CCNo">
                     </div>
                     <div>
                         <label for="Cfrom">Case From</label>
-                        <input type="text" id="Cfrom" ></input>
+                        <input type="text" id="Cfrom"></input>
                     </div>
                     <div>
                         <label for="Con">Case On</label>
-                        <input height="100px" type="text" id="Con" ></input>
+                        <input height="100px" type="text" id="Con"></input>
                     </div>
                 </div>
                 <div><button class="Save" id="btn" type="Submit">Save</button></div>
@@ -50,56 +56,110 @@
 
         <div class="FormPreview">
             <!-- Personal Details -->
-            <P>IN THE COURT OF THE </P>
-            <p id="CourtName"></p>
-            <P>Case Number </P>
-            <P id="CCNO"> </P>
-            <p><B>COMPLAIANAT;</B></p>
-            <P  > <label for="" id="CFROM"></label> <b>V/S</b>  <label for="" id="CTO"></label> </P>
-            
-            <p><b>ACCUSED;</b></p>
-            <p><b>APPLICATION UNDER SECTION 436 OF THE CODE OF CRIMINAL PROCEDURE</b></p>
-            <p>The above named accused submits as follows:-</p>
-            <p>1.  &emsp; The complaianat has filed a case against the accused for alleged offence punishable under section
-                (SECTION NUMBER)</p>
-            <p>2.  &emsp; The accused submits that the said offence is bailable in nature and the accused is totally innocent of
-                the alleged offence.</p>
-            <p>3.  &emsp; The alleged offences are baiable and compoundable in nature, neither punishable with death or life
-                imprisonment, the cash security be furnished in the event of release of the accused by this Hon'ble
-                court (COURT NAME) </p>
-            <p>5. &emsp; The accused is innocent of the said alleged offence and has got valid and tenable defence.</p>
-            <p>6. &emsp;That the accused person is ready and willing to furnish a cash surety/surety to the satisfaction of
-                this Hon,ble court to ensure his appearance and is willing to abide by any of the conditions imposed by
-                this Hon,ble court.</p>
-            <p>7. &emsp; The accused undertakes to appear before this Hon'ble court as and when directed to do so..</p>
-            <p>8. &emsp; The accused is having permanent abode peace lovng citizen and have deep roots in the society, to do
-                have bad antecedents.</p>
-            <p>WHEREFORE, the accused prays that this Hon,ble court may be pleased to allow the application and released
-                the accused persons on bail, in the above said case, in the interest of justice.</p>
+            <div id="content1" class="content" style="display: none;">
+                <P>IN THE COURT OF THE </P>
+                <p class="CourtName"></p>
+                <P>Case Number </P>
+                <P class="CCNO"> </P>
+                <p><B>COMPLAIANAT;</B></p>
+                <P> <label for="" class="CFROM"></label> <b>V/S</b> <label for="" class="CTO"></label> </P>
 
+                <p><b>ACCUSED;</b></p>
+                <p><b>APPLICATION UNDER SECTION 436 OF THE CODE OF CRIMINAL PROCEDURE</b></p>
+                <p>The above named accused submits as follows:-</p>
+                <p>1. &emsp; The complaianat has filed a case against the accused for alleged offence punishable under
+                    section
+                    (SECTION NUMBER)</p>
+                <p>2. &emsp; The accused submits that the said offence is bailable in nature and the accused is totally
+                    innocent of
+                    the alleged offence.</p>
+                <p>3. &emsp; The alleged offences are baiable and compoundable in nature, neither punishable with death
+                    or
+                    life
+                    imprisonment, the cash security be furnished in the event of release of the accused by this Hon'ble
+                    court (COURT NAME) </p>
+                <p>5. &emsp; The accused is innocent of the said alleged offence and has got valid and tenable defence.
+                </p>
+                <p>6. &emsp;That the accused person is ready and willing to furnish a cash surety/surety to the
+                    satisfaction
+                    of
+                    this Hon,ble court to ensure his appearance and is willing to abide by any of the conditions imposed
+                    by
+                    this Hon,ble court.</p>
+                <p>7. &emsp; The accused undertakes to appear before this Hon'ble court as and when directed to do so..
+                </p>
+                <p>8. &emsp; The accused is having permanent abode peace lovng citizen and have deep roots in the
+                    society,
+                    to do
+                    have bad antecedents.</p>
+                <p>WHEREFORE, the accused prays that this Hon,ble court may be pleased to allow the application and
+                    released
+                    the accused persons on bail, in the above said case, in the interest of justice.</p>
+            </div>
+            <div id="content2" class="content" style="display: none;">
+                <P>IN THE COURT OF THE </P>
+                <p class="CourtName"> </p>
+                <P>Case Number </P>
+                <P class="CCNO"> </P>
+                <p><B>COMPLAIANAT;</B></p>
+                <P> <label for="" class="CFROM"></label> <b>V/S</b> <label for="" class="CTO"></label> </P>
+
+                <p><b>ACCUSED;</b></p>
+                <p><b>UNDER SECTION 437 OF THE CODE OF CRIMINAL</b></p>
+                <p>PROCEDURE, the above named accused most respectfully submits as follows:</p>
+                <p>That the complainant police have registered a case against the accused for an alleged offence
+                    punishable under section (SECTION NUMBER)</p>
+                <p>2. &emsp; That the accused are innocent of the said offence and for which the accused have got valid
+                    and tenable defence.</p>
+                <p>3. &emsp; That the accused have been falsely implicated in the alleged offence at the instance of the
+                    persons who are enimically disposed towards the accused.</p>
+                <p>4. &emsp; The accused are a peace loving and law abiding citizen and have no bad antecedents. Further
+                    the alleged offence is neither punishable with death nor imprisonment for life</p>
+                <p>5. &emsp; The accused are permanent resident of having permanent abide, thereby the accused will
+                    neither abscond nor delay the proceedings.</p>
+                <p>6. &emsp; The accused are ready and willing to abide by any condition or conditions that may be
+                    imposed by this Hon'ble Court, in the event of allowing this application. Further the accused is/are
+                    ready to offer solvent surety to the satisfaction of this Hon'ble court for the due appearance.</p>
+                <p>&emsp; &emsp;WHEREFORE, the accused prays that this Hon'ble Court be pleased to enlarged the accused
+                    on bail, in the interest of justice and equity.</p>
+            </div>
 
         </div>
     </div>
     <script>
-        const CName=document.getElementById('CName');
-        const Con=document.getElementById('Con');
-        const Cfrom=document.getElementById('Cfrom');
-        const CCNo=document.getElementById('CCNo');
+        function toggleContent() {
+            const option1 = document.querySelector('input[name="content"][value="option1"]');
+            const content1 = document.getElementById("content1");
+            const content2 = document.getElementById("content2");
 
-        const CCNO=document.getElementById('CCNO');
-        const CourtName=document.getElementById('CourtName');
-        const CFROM=document.getElementById('CFROM');
-        const CTO=document.getElementById('CTO');
+            if (option1.checked) {
+                content1.style.display = "block";
+                content2.style.display = "none";
+            } else {
+                content1.style.display = "none";
+                content2.style.display = "block";
+            }
+        }
+        const CName = document.getElementById('CName');
+        const Con = document.getElementById('Con');
+        const Cfrom = document.getElementById('Cfrom');
+        const CCNo = document.getElementById('CCNo');
 
-        const btn=document.getElementById('btn');
-        function fun1(e){
+        const CCNO = document.getElementById('CCNO');
+        const CourtName = document.getElementById('CourtName');
+        const CFROM = document.getElementById('CFROM');
+        const CTO = document.getElementById('CTO');
+
+        const btn = document.getElementById('btn');
+        function fun1(e) {
             e.preventDefault();
             CourtName.innerHTML = CName.value;
-            CCNO.innerHTML=CCNo.value;
-            CFROM.innerHTML=Cfrom.value;
-            CTO.innerHTML=Con.value;
+            CCNO.innerHTML = CCNo.value;
+            CFROM.innerHTML = Cfrom.value;
+            CTO.innerHTML = Con.value;
         }
-        btn.addEventListener('click',fun1);
+        btn.addEventListener('click', fun1);
+
     </script>
 </body>
 

@@ -31,7 +31,7 @@ def eligibility(request):
         except:
         
             messages.warning(request,'No such offence found in Database')
-            return render(request, 'eligibility.html',{'offences':offences_objs,'user_info':info})
+            return render(request, 'eligibility.html',{'offences':offences_objs})
     
     else:
         

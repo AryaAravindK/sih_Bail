@@ -46,9 +46,7 @@
               {% endfor %}
             </datalist>
             
-            
           <label for="">Imprisonment already served</label>
-
           <select class="form-control" >
             <option>1</option>
             <option>2</option>
@@ -90,28 +88,46 @@
             </div>
             <div>
               <h3>Minimum Penalty</h3>
-              :{{info.min_penalty}}
+              :{{user_info.min_penalty}}
 
             </div>
             <div>
               <h3>Bailable</h3>
-              {% if info.bailable %}
-                <p>:The offence commited it a Bailable offeces</p>
-              {% else %}
-              <p>:The offence commited it a Non-Bailable offeces</p>
+              {% if info %}
+                {% if info.bailable %}
+                  <p>:The offence commited it a Bailable offeces</p>
+                {% else %}
+                <p>:The offence commited it a Non-Bailable offeces</p>
                 {% endif %}
-
+              {% else %}
+              <p>:</p>
+                {% endif %}
             </div>
             <div>
               <h3>Compoundable</h3>
-              {% if info.compoundable %}
-                <p>:The offence commited it a compoundable offeces</p>
+              {% if info %}
+                {% if info.compoundable %}
+                  <p>:The offence commited it a compoundable offeces</p>
+                {% else %}
+                  <p>:The offence commited it a Non-compoundable offeces</p>
+                  {% endif %}
               {% else %}
-              <p>:The offence commited it a Non-compoundable offeces</p>
+              <p>:</p>
+                
+
                 {% endif %}
             </div>
             <div>
               <h3>Bail Eligibility</h3>
+              {% if info %}
+                {% if info.bailable %}
+                  <p>:You are eligible to apply for Bail</p>
+                {% else %}
+                <p>:You are not eligible to apply for Bail</p>
+                {% endif %}
+              {% else %}
+              <p>:</p>
+                {% endif %}
             </div>
           </div>
         </div>

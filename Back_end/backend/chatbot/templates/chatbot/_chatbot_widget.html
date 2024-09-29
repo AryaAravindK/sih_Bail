@@ -1,0 +1,60 @@
+
+
+<div id="chatbot-container">
+    <div id="chat-history" style="max-height: 300px; overflow-y: auto;">
+        <!-- Chat history will be appended here -->
+    </div>
+
+    <div class="chat-input">
+        <textarea id="user-message" placeholder="Type your message"></textarea>
+        <button id="send-btn">Send</button>
+    </div>
+</div>
+
+document.getElementById('send-btn').addEventListener('click', function() {
+    const message = document.getElementById('user-message').value;
+    
+    fetch("{% url 'chatbot' %}", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'X-CSRFToken': '{{ csrf_token }}'
+        },
+        body: `message=${message}`
+    })
+    .then(response => response.json())
+    .then(data => {
+        const chatHistory = document.getElementById('chat-history');
+        chatHistory.innerHTML += `<strong>You:</strong> ${data.message}<br><strong>Bot:</strong> ${data.response}<br><br>`;
+        document.getElementById('user-message').value = '';
+    });
+});
+</script>
+
+
+
+
+<style>
+    #chatbot-container {
+        position: fixed;
+        bottom: 0;
+        right: 20px;
+        width: 300px;
+        height: 400px;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: none; /* Hidden initially */
+    }
+
+    .chat-input {
+        margin-top: 10px;
+    }
+
+    #chat-history {
+        padding: 10px;
+        background-color: #f1f1f1;
+    }
+</style>

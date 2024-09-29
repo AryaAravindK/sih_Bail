@@ -38,11 +38,27 @@
     <div class="Chatbot-container">
       CB
       </div>
+      {% include 'chatbot/_chatbot_widget.html' %}
 
     <footer class="footer">
       <span>Copyrights reserved by @ 2024 TeamNirvana</span>
     </footer>
 
-    
+    <button id="toggle-chatbot">Chat</button>
+
+    <script>
+      const chatbotContainer = document.getElementById('chatbot-container');
+      const toggleButton = document.getElementById('toggle-chatbot');
+      
+      toggleButton.addEventListener('click', function() {
+          if (chatbotContainer.style.display === 'none') {
+              chatbotContainer.style.display = 'block';
+          } else {
+              chatbotContainer.style.display = 'none';
+          }
+      });
+  </script>
+
+
 </body>
 </html>

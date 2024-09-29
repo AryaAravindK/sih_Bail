@@ -86,24 +86,29 @@
             </div>
             <div>
               <h3>Maximum Penalty</h3>
-              {{user_info.max_penalty}}
+              :{{user_info.max_penalty}}
             </div>
             <div>
               <h3>Minimum Penalty</h3>
-              {{info.min_penalty}}
+              :{{info.min_penalty}}
 
             </div>
             <div>
               <h3>Bailable</h3>
               {% if info.bailable %}
-                <p>The offence commited it a Bailable offeces</p>
+                <p>:The offence commited it a Bailable offeces</p>
               {% else %}
-              <p>The offence commited it a Non-Bailable offeces</p>
+              <p>:The offence commited it a Non-Bailable offeces</p>
                 {% endif %}
 
             </div>
             <div>
               <h3>Compoundable</h3>
+              {% if info.compoundable %}
+                <p>:The offence commited it a compoundable offeces</p>
+              {% else %}
+              <p>:The offence commited it a Non-compoundable offeces</p>
+                {% endif %}
             </div>
             <div>
               <h3>Bail Eligibility</h3>

@@ -152,8 +152,8 @@ button:hover {
     gap: 10px;
     height: 130vh;
     padding: 20px;
-    /* background-color: #F2FBF9; */
-    background-color: red;
+    background-color: #F2FBF9;
+    /* background-color: red; */
 }
 
 .left-column {

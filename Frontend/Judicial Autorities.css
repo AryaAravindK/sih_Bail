@@ -1,9 +1,7 @@
 * {
-
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0px;
-
 }
 
 .header {
@@ -76,41 +74,15 @@ nav a {
     margin-left: 20px;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Two equal columns */
-    grid-template-rows: auto;
-    /* First column takes up the full height */
-    gap: 10px;
-    /* Optional: Gap between grid items */
-}
 
-.left-column {
-    grid-column: 1 / 2;
-    /* Left column */
-    background-color: #f0f0f0;
-    padding: 20px;
-    height: 85vh;
-    background-color:#AFEBDF;
-    border: 1px Solid #45BCAC;
-    border-radius: 5px;
-}
 
-.right-column {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    /* Two equal rows inside right column */
-    grid-column: 2 / 3;
-    /* Right column */
-}
 
-.right-column .top-row,
+/* .right-column .top-row,
 .right-column .bottom-row {
     background-color: #e0e0e0;
     padding: 20px;
     margin: 10px 0;
-}
+} */
 
 footer {
     background-color: #008080;
@@ -121,6 +93,7 @@ footer {
     /* width: 100vw; */
     padding: 25px;
     font-size: 20px;
+    margin-bottom: 0px;
 }
 
 
@@ -168,4 +141,58 @@ button:hover {
     text-align: center;
     padding: 15px;
     font-weight: bold;
+}
+
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr; /* Two columns */
+    gap: 10px;
+    height: 88vh;
+    padding: 20px;
+    background-color: #F2FBF9;
+}
+
+.left-column {
+    grid-column: 1 / 2;
+    background-color: #AFEBDF;
+    border: 1px solid #45BCAC;
+    border-radius: 5px;
+    padding: 20px;
+    height: 50vh;
+}
+
+.right-column {
+    display: grid;
+    grid-template-rows: 1fr 1.5fr; 
+    grid-column: 2 / 30;
+    gap: 20px;
+    background-color: #AFEBDF;
+    border: 1px solid #45BCAC;
+    border-radius: 5px;
+    padding: 20px;
+    height: 80vh;
+    row-gap: 10px;
+}
+
+.top-row {
+    padding: 20px;
+    background-color: #e0e0e0;
+    height: 20vh;
+}
+
+.bottom-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #e0e0e0;
+    padding: 20px;
+    height: 50vh;
+    text-align: center;
+}
+.bottom-row h2{
+    text-align: center;
+    margin: 0 0 0 auto;
 }

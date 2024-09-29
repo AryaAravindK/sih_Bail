@@ -17,7 +17,7 @@
 
 </head>
 <body>
-  
+
   <nav class="header">
     <div class="logo">
         <img src="{% static 'Assets/logo.png' %}" alt="Bail Reckoner Logo" class="logo-image">
@@ -34,6 +34,7 @@
     <h1>Home Page</h1>
     {% endblock %}
 
+
     <div class="Chatbot-container">
       CB
       </div>
@@ -42,32 +43,6 @@
       <span>Copyrights reserved by @ 2024 TeamNirvana</span>
     </footer>
 
-    <style>
-      .Chatbot-container{
-        position: fixed ;
-        top:90%;
-        left:90%;
-        transform:translate(-50%,-50%);
-        border-radius:50%;
-
-        padding:0;
-        margin:0;
-        background-color:red;
-        height:70px;
-        width: 70px;
-        transition :all 1s ;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-      }
-
-      .Chatbot-container:hover{
-        height:400px;
-        width:300px;
-        background-color:rgba(150, 0, 0, 1);
-        border-radius:10px;
-        top:70%;
-      }
-    </style>
     
 </body>
 </html>

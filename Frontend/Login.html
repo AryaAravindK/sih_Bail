@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Bail Reckoner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E0F7FA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            max-width: 1200px;
+        }
+        .signin-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            margin-right: 40px; /* Leave space on the right for the illustration */
+        }
+        .signin-container h2 {
+            margin-bottom: 20px;
+            color: #00796B;
+        }
+        .signin-container .icon {
+            width: 60px;
+            height: 60px;
+            background-color: #00796B;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+        .signin-container input[type="email"],
+        .signin-container input[type="password"],
+        .signin-container select {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 20px;
+            border: 1px solid #B0BEC5;
+        }
+        .signin-container input[type="submit"] {
+            background-color: #00796B;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 12px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .signin-container input[type="submit"]:hover {
+            background-color: #004D40;
+        }
+        .signin-container a {
+            display: block;
+            margin-top: 12px;
+            color: #00796B;
+            text-decoration: none;
+        }
+        .signin-container a:hover {
+            text-decoration: underline;
+        }
+        .signin-container .signup-link {
+            margin-top: 20px;
+            color: #004D40;
+        }
+        .illustration {
+            width: 50%;
+            text-align: center;
+        }
+        .illustration img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sign-In Section -->
+        <div class="signin-container">
+            <div class="icon"></div> <!-- Space for an icon -->
+            <h2>Welcome Back</h2>
+            <p>Please sign in to your account</p>
+            <form action="/login" method="post">
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <select name="user-type" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="prisoner">Inmate</option>
+                    <option value="legal-aid-provider">Legal Aid Provider</option>
+                    <option value="judicial-authority">Judicial Authority</option>
+                </select>
+                <input type="submit" value="Sign In">
+            </form>
+            <a href="/forgot-password">Forgot Password?</a>
+            <p class="signup-link">Don't have an account? <a href="/signup">Sign up here</a></p>
+        </div>
+
+        <!-- Illustration Section -->
+        <div class="illustration">
+            <img src="illustration.png" alt="Illustration for Bail Reckoner">
+        </div>
+    </div>
+</body>
+</html>

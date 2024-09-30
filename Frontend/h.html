@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat Interface</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-screen">
+
+  <!-- Chat Container -->
+  <div class="container mx-auto px-4 py-6 h-full flex flex-col">
+    
+    <!-- Chat Header -->
+    <header class="bg-white p-4 rounded-t-lg shadow-md flex items-center">
+      <img class="w-10 h-10 rounded-full mr-4" src="https://via.placeholder.com/150" alt="User Profile">
+      <div>
+        <h2 class="font-semibold text-gray-700">John Doe</h2>
+        <p class="text-sm text-gray-500">Online</p>
+      </div>
+    </header>
+
+    <!-- Chat Messages Section -->
+    <div class="flex-1 bg-gray-100 p-4 overflow-y-auto" id="chatBox">
+
+      <!-- Sent Message -->
+      <div class="flex justify-end mb-4">
+        <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg max-w-xs">
+          <p>Hey, how are you?</p>
+        </div>
+      </div>
+
+      <!-- Received Message -->
+      <div class="flex justify-start mb-4">
+        <div class="bg-gray-300 text-gray-800 p-3 rounded-r-lg rounded-bl-lg max-w-xs">
+          <p>I'm good, how about you?</p>
+        </div>
+      </div>
+
+      <!-- Sent Message -->
+      <div class="flex justify-end mb-4">
+        <div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg max-w-xs">
+          <p>I'm doing well, thanks! Any plans for the weekend?</p>
+        </div>
+      </div>
+
+      <!-- Received Message -->
+      <div class="flex justify-start mb-4">
+        <div class="bg-gray-300 text-gray-800 p-3 rounded-r-lg rounded-bl-lg max-w-xs">
+          <p>Not much, just relaxing. You?</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Chat Input Section -->
+    <div class="bg-white p-4 rounded-b-lg shadow-md flex items-center">
+      <input
+        type="text"
+        placeholder="Type a message..."
+        class="w-full border rounded-full py-2 px-4 text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
+      />
+      <button class="ml-4 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700">
+        Send
+      </button>
+    </div>
+
+  </div>
+
+</body>
+</html>

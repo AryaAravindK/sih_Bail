@@ -239,7 +239,7 @@ button:hover {
     transition: max-height 0.5s ease-in;
 }
 
-.card {
+.SCcard {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -251,29 +251,31 @@ button:hover {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-
-.dropdown-content.open .card {
+.SCcard p{
+    text-align: left;
+}
+.dropdown-content.open .SCcard {
     opacity: 1;
     transform: translateY(0);
 }
 
-.card:nth-child(1) {
+.SCcard:nth-child(1) {
     transition-delay: 0.2s;
 }
 
-.card:nth-child(2) {
+.SCcard:nth-child(2) {
     transition-delay: 0.4s;
 }
 
-.card:nth-child(3) {
+.SCcard:nth-child(3) {
     transition-delay: 0.6s;
 }
 
-.card:nth-child(4) {
+.SCcard:nth-child(4) {
     transition-delay: 0.8s;
 }
 
-.card:nth-child(5) {
+.SCcard:nth-child(5) {
     transition-delay: 1s;
 }
 
@@ -286,4 +288,3 @@ button:hover {
     padding:10px;
 
 }
-

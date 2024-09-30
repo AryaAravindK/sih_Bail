@@ -10,3 +10,4 @@ urlpatterns = [
     path('application/',views.appln , name='application'),
     path('predictor/',views.predictor, name='predictor')
 ]
+

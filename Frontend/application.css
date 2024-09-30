@@ -6,6 +6,10 @@
 
 }
 
+body {
+    background-color: #AFeBDF;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -101,7 +105,9 @@ nav a {
     padding: 20px;
     margin: 10px;
     border: 1px solid #000;
-    
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #454545;
 }
 
 .FormPreview p {
@@ -125,6 +131,10 @@ nav a {
     /* border-t-primary (use your primary color variable or replace with actual color) */
     margin-top: 0.25rem;
     /* mt-1 = 0.25rem (4px) */
+    background-color: #ffffff;
+    border-radius: 15px;
+    
+    border: 1px solid #454545;
 }
 
 
@@ -154,10 +164,9 @@ nav a {
     border-radius: 25px;
     cursor: pointer;
     width: 150px;
-    top: 15px;
     position: relative;
     font-size: 25px;
-    color: #AFEBDF;
+    color: #ffffff;
     margin-left: 30%;
 }
 
@@ -188,7 +197,8 @@ nav a {
 }
 
 .no-print {
-    display: none; /* Hide the button when capturing the PDF */
+    display: none;
+    /* Hide the button when capturing the PDF */
 }
 
 
@@ -203,6 +213,4 @@ nav a {
     font-size: 20px;
     position: absolute;
     width: 100%;
-  }
-  
-  
+}

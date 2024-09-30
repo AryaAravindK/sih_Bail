@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hire a Lawyer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Applying custom styles directly in CSS */
+        body {
+            background-color: #E0F7FA;
+            /* Page background color */
+        }
+
+        .profile-icon {
+            border: 1px solid #45BCAC;
+            /* Profile icon border */
+        }
+
+        .profile-section {
+            border: 1px solid #45BCAC;
+            /* Profile section border */
+        }
+        .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0 1px 5px;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    background-color: white;
+    color: #0A2928;
+    /* position: relative;
+      left: 90px; */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo-image {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: #FFFFFF;
+    /* position: absolute;
+      left: 50px; */
+    width: 50px;
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: #FFFFFF;
+}
+
+.nav-link {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #0A2928;
+    font-size: 25px;
+}
+
+a:hover {
+    font-weight: bolder;
+    transition: 300ms;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1b1b1b;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav class="header">
+        <div class="logo">
+            <img src="Assessts/bail simple.png" alt="Bail Reckoner Logo" class="logo-image">
+            <h1>Bail Reckoner</h1>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-link"><a href="#">Home</a></li>
+            <li class="nav-link"><a href="#">About</a></li>
+            <li class="nav-link"><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section with Search Bar -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto py-6 px-4 flex justify-between items-center">
+            <!-- Logo or Title -->
+
+
+            <!-- Search Bar -->
+            <div class="w-full max-w-lg mx-auto">
+                <div class="relative">
+                    <input type="text" placeholder="Search for lawyers..."
+                        class="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 " />
+                    <button type="submit"
+                        class="absolute right-0 top-0 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-6">
+
+        <!-- Heading -->
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-10">Hire a Lawyer</h1>
+
+        <!-- Lawyer Profiles Section -->
+        <section class="space-y-8">
+
+            <!-- Lawyer Profile 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg profile-section flex justify-between items-center">
+                <div class="flex items-center">
+                    <img class="w-24 h-24 rounded-full object-cover mr-6 profile-icon"
+                        src="https://via.placeholder.com/150" alt="Lawyer Profile Picture">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-700">John Doe</h3>
+                        <p class="text-gray-500">Criminal Defense Lawyer</p>
+                        <p class="mt-2 text-gray-600">Expert in criminal law with 10+ years of experience. Known for
+                            high success rate in defending clients.</p>
+                        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                            onclick="location.href = 'h.html'">Connect</button>
+                    </div>
+                </div>
+                <!-- Rating Section -->
+                <div class="flex flex-col items-end">
+                    <p class="text-lg text-gray-600">Rating</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-yellow-400 text-xl">&#9733;</span>
+                        <span class="text-yellow-400 text-xl">&#9733;</span>
+                        <span class="text-yellow-400 text-xl">&#9733;</span>
+                        <span class="text-yellow-400 text-xl">&#9733;</span>
+                        <span class="text-gray-400 text-xl">&#9733;</span>
+                        <span class="ml-2 text-gray-600">(4.0)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lawyer Profile 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg profile-section flex justify-between items-center">
+                <div class="flex items-center">
+                    <img class="w-24 h-24 rounded-full object-cover mr-6 profile-icon"
+                        src="https://via.placeholder.com/150" alt="Lawyer Profile Picture">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-700">Jane Smith</h3>
+                        <p class="text-gray-500">Family Law Attorney</p>
+                        <p class="mt-2 text-gray-600">Specializing in family law, child custody cases, and divorce
+                            settlements. Compassionate and effective representation.</p>
+                        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                            onclick="location.href = 'h.html'">Connect</button>
+                    </div>
+                </div>
+                <!-- Rating Section -->
+                <div class="flex flex-col items-end">
+                    <p class="text-lg text-gray-600">Rating</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-yellow-400 text-xl">&#9733;</span>
+                        <span class="text-yellow-400 text-xl">&#9733;</span>
+                        <span class="text-yellow-400 text-xl">&#9733;</span>
+                        <span class="text-gray-400 text-xl">&#9733;</span>
+                        <span class="text-gray-400 text-xl">&#9733;</span>
+                        <span class="ml-2 text-gray-600">(3.0)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lawyer Profile 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg profile-section flex justify-between items-center">
+                <div class="flex items-center">
+                    <img class="w-24 h-24 rounded-full object-cover mr-6 profile-icon"
+                        src="https://via.placeholder.com/150" alt="Lawyer Profile Picture">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-700">Michael Brown</h3>
+                        <p class="text-gray-500">Corporate Lawyer</p>
+                        <p class="mt-2 text-gray-600">Handling corporate legal matters with expertise in contracts,
+                            mergers, and acquisitions. Trusted advisor to businesses.</p>
+                        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                            onclick="location.href = 'h.html'">Connect</button>
+                    </div>
+                </div>
+                <!-- Rating Section -->
+                <div class="flex flex-col items-end">
+                    <p class="text-lg text-gray-600">Rating</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-yellow-400 text-xl">&#9733;</span>
+                        <span class="text-yellow-400 text-xl">&#9733;</span>
+                        <span class="text-yellow-400 text-xl">&#9733;</span>
+                        <span class="text-yellow-400 text-xl">&#9733;</span>
+                        <span class="text-yellow-400 text-xl">&#9733;</span>
+                        <span class="ml-2 text-gray-600">(5.0)</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #000000;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: white; /* All buttons start with white background */
+  color: black; /* All buttons start with black text */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button.selected {
+  background-color: #000; /* Selected buttons turn black */
+  color: #fff; /* Selected buttons have white text */
+  border-color: #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  opacity: 0.8;
+}

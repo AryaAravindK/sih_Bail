@@ -4,9 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bail Reckoner</title>
     <link rel="stylesheet" href="application.css">
+    <link rel="stylesheet" href="button.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 0px;
+        }
 
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 1px solid #000000;
+            cursor: pointer;
+            font-size: 14px;
+            background-color: white;
+            /* All buttons start with white background */
+            color: black;
+            /* All buttons start with black text */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .button.selected {
+            background-color:#0A2928;
+            /* Selected buttons turn black */
+            color: #fff;
+            /* Selected buttons have white text */
+            border-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            opacity: 0.8;
+        }
+
+        #selected-offenses-preview,
+        #selected-health-preview {
+            font-weight: bold;
+            display: inline;
+            white-space: nowrap;
+            /* Prevents text from wrapping */
+        }
+
+        .content p {
+            margin: 8px 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,7 +84,13 @@
 
     <div class="Container">
         <div class="FormSection">
-            <h2>Details</h2>
+            <h1 style="color: #0A2928;"><center>Details</center></h1>
+            <h3 style="padding:15px 0 15px 0;">Select Offenses</h3>
+            <div class="button-group" id="color-buttons"></div>
+
+            <h3 style="padding:15px 0 15px 0;">Select Health Conditions</h3>
+            <div class="button-group" id="collection-buttons"></div>
+
             <form>
                 <div class="Input-details">
                     <label>
@@ -67,7 +133,8 @@
                 <p><b>APPLICATION UNDER SECTION 436 OF THE CODE OF CRIMINAL PROCEDURE</b></p>
                 <p>The above named accused submits as follows:-</p>
                 <p>1. &emsp; The complainant has filed a case against the accused for alleged offence punishable under
-                    section (SECTION NUMBER)</p>
+                    section <span id="selected-offenses-preview1"></span>.
+                </p>
                 <p>2. &emsp; The accused submits that the said offence is bailable in nature and the accused is totally
                     innocent of the alleged offence.</p>
                 <p>3. &emsp; The alleged offences are bailable and compoundable in nature, neither punishable with death
@@ -84,6 +151,9 @@
                     society, with no bad antecedents.</p>
                 <p>WHEREFORE, the accused prays that this Hon'ble court may be pleased to allow the application and
                     release the accused persons on bail, in the above said case, in the interest of justice.</p>
+                <p>The accused is undergoing <span id="selected-health-preview1"></span>. Therefore we request the
+                    honorable court to grant bail
+                </p>
             </div>
             <div id="content2" class="content" style="display: none;">
                 <p>IN THE COURT OF THE </p>
@@ -97,7 +167,9 @@
                 <p><b>UNDER SECTION 437 OF THE CODE OF CRIMINAL PROCEDURE</b></p>
                 <p>PROCEDURE, the above named accused most respectfully submits as follows:</p>
                 <p>That the complainant police have registered a case against the accused for an alleged offence
-                    punishable under section (SECTION NUMBER)</p>
+                    punishable under section (SECTION NUMBER)
+                    <span id="selected-offenses-preview2"></span>.
+                </p>
                 <p>2. &emsp; That the accused is innocent of the said offence and has got valid and tenable defense.</p>
                 <p>3. &emsp; That the accused have been falsely implicated in the alleged offence at the instance of the
                     persons who are inimically disposed towards the accused.</p>
@@ -109,17 +181,66 @@
                     ready to offer solvent surety to the satisfaction of this Hon'ble court for the due appearance.</p>
                 <p>WHEREFORE, the accused prays that this Hon'ble Court be pleased to enlarge the accused on bail, in
                     the interest of justice and equity.</p>
+                    <p>The accused is undergoing <span id="selected-health-preview2"></span>. Therefore we request the
+                        honorable court to grant bail
+                    </p>
             </div>
             <button id="downloadPdfBtn">Download as PDF</button>
         </div>
+
     </div>
-    <footer class="footer">
-        <span>Copyrights reserved by @ 2024 TeamNirvana</span>
-    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script>
-    <script src="application.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="application.js"></script>
+    <script src="button.js"></script>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const Offense = ['Murder', 'Rape', 'Kidnapping', 'Robbery', 'Attempt to Murder', 'Criminal Conspiracy', 'Assault', 'Defamation', 'Trespass', 'Forgery', 'Cheating', 'Counterfeiting', 'Criminal Breach of Trust', 'Voluntarily Causing Hurt', 'Public Nuisance', 'Rioting', 'Theft', 'Criminal Intimidation', 'Adultery', 'Obscenity'];
+            const Health_Condition = ['Asthma', 'Diabetes', 'Heart Disease', 'Hypertension', 'Arthritis', 'Kidney Failure', 'Cancer', 'Allergies', 'Epilepsy', 'Depression', 'Chronic Fatigue Syndrome', 'Multiple Sclerosis', "Parkinson's Disease", "Alzheimer's Disease", 'Lupus', 'Psoriasis', 'Tuberculosis', 'HIV/AIDS', 'Cystic Fibrosis', 'Fibromyalgia'];
+
+            const colorButtons = document.getElementById('color-buttons');
+            const collectionButtons = document.getElementById('collection-buttons');
+            const selectedOffensesPreview = document.getElementById('selected-offenses-preview');
+            const selectedHealthPreview = document.getElementById('selected-health-preview');
+
+            // Create offense buttons
+            Offense.forEach(offense => {
+                const button = document.createElement('div');
+                button.classList.add('button');
+                button.textContent = offense;
+                button.addEventListener('click', () => toggleSelection(button));
+                colorButtons.appendChild(button);
+            });
+
+            // Create health condition buttons
+            Health_Condition.forEach(condition => {
+                const button = document.createElement('div');
+                button.classList.add('button');
+                button.textContent = condition;
+                button.addEventListener('click', () => toggleSelection(button));
+                collectionButtons.appendChild(button);
+            });
+
+            // Toggle selection and update the preview
+            function toggleSelection(button) {
+                button.classList.toggle('selected');
+                updateSelectedItems();
+            }
+
+            // Update the display of selected items and preview
+            function updateSelectedItems() {
+                const selectedOffenses = Array.from(document.querySelectorAll('#color-buttons .button.selected'))
+                    .map(button => button.textContent);
+                const selectedConditions = Array.from(document.querySelectorAll('#collection-buttons .button.selected'))
+                    .map(button => button.textContent);
+
+                selectedOffensesPreview.textContent = selectedOffenses.length ? selectedOffenses.join(', ') : 'None';
+                selectedHealthPreview.textContent = selectedConditions.length ? selectedConditions.join(', ') : 'None';
+            }
+        });
+    </script> -->
 </body>
 
 </html>

@@ -1,44 +1,23 @@
 {% extends "layout.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'chatbot/css/chatbot.css' %}">
+{% endblock %}
 
 {% block content %}
+<div class="main"></div>
 <div class="chat-container">
-    <div id="chat-history">
-        {% for chat in chat_history %}
-            <div class="chat-message">
-                <strong>You:</strong> {{ chat.message }}
-                <br>
-                <strong>Bot:</strong> {{ chat.response }}
-            </div>
-        {% empty %}
-            <p>No chat history yet.</p>
-        {% endfor %}
-    </div>
+    <div id="chat-history"></div>
 
     <div class="chat-input">
-        <textarea id="user-message" placeholder="Type your message"></textarea>
+        <textarea id="user-message" placeholder="Type your message" name="message"></textarea>
         <button id="send-btn">Send</button>
     </div>
 </div>
 
-<script src"static 'chatbot/js/chatbot.js'">
+<input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
 
-    document.getElementById('send-btn').addEventListener('click', function() {
-        const message = document.getElementById('user-message').value;
-        
-        fetch("{% url 'chatbot' %}", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'X-CSRFToken': '{{ csrf_token }}'
-            },
-            body: `message=${message}`
-        })
-        .then(response => response.json())
-        .then(data => {
-            const chatHistory = document.getElementById('chat-history');
-            chatHistory.innerHTML += `<strong>You:</strong> ${data.message}<br><strong>Bot:</strong> ${data.response}<br><br>`;
-            document.getElementById('user-message').value = '';
-        });
-    });
-</script>
+<!-- Correctly load the JS file -->
+<script src="{% static 'chatbot/js/chatbot.js' %}"></script>
 {% endblock %}

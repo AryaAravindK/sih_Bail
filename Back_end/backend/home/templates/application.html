@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'application/css/application.css'%}">
+
+{% endblock %}
+
+
+{% block title %} 
+ <title>Draft a Doc</title>
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="Container">
+    <div class="FormSection">
+        <h2>Details</h2>
+        <form>
+            <div class="Input-details">
+                <label>
+                    <input type="radio" name="content" value="option1" onclick="toggleContent()" checked> Bailable
+                </label>
+                <label>
+                    <input type="radio" name="content" value="option2" onclick="toggleContent()"> Non - Bailable
+                </label>
+                <div>
+                    <label for="CName">Court Name</label>
+                    <input id="CName">
+                </div>
+                <div>
+                    <label for="CCNo">Case Number</label>
+                    <input id="CCNo">
+                </div>
+                <div>
+                    <label for="Cfrom">Case From</label>
+                    <input type="text" id="Cfrom">
+                </div>
+                <div>
+                    <label for="Con">Case On</label>
+                    <input type="text" id="Con">
+                </div>
+            </div>
+            <div><button class="Save" id="btn" type="submit">Save</button></div>
+        </form>
+    </div>
+
+    <div class="FormPreview">
+        <div id="content1" class="content">
+            <p>IN THE COURT OF THE </p>
+            <p class="CourtName"></p>
+            <p>Case Number </p>
+            <p class="CCNO"> </p>
+            <p><b>COMPLAINANT;</b></p>
+            <p> <label for="" class="CFROM"></label> <b>V/S</b> <label for="" class="CTO"></label> </p>
+
+            <p><b>ACCUSED;</b></p>
+            <p><b>APPLICATION UNDER SECTION 436 OF THE CODE OF CRIMINAL PROCEDURE</b></p>
+            <p>The above named accused submits as follows:-</p>
+            <p>1. &emsp; The complainant has filed a case against the accused for alleged offence punishable under
+                section (SECTION NUMBER)</p>
+            <p>2. &emsp; The accused submits that the said offence is bailable in nature and the accused is totally
+                innocent of the alleged offence.</p>
+            <p>3. &emsp; The alleged offences are bailable and compoundable in nature, neither punishable with death
+                nor life imprisonment, the cash security be furnished in the event of release of the accused by this
+                Hon'ble court (COURT NAME)</p>
+            <p>5. &emsp; The accused is innocent of the said alleged offence and has got valid and tenable defense.
+            </p>
+            <p>6. &emsp;That the accused person is ready and willing to furnish a cash surety/surety to the
+                satisfaction of this Hon'ble court to ensure his appearance and is willing to abide by any of the
+                conditions imposed by this Hon'ble court.</p>
+            <p>7. &emsp; The accused undertakes to appear before this Hon'ble court as and when directed to do so.
+            </p>
+            <p>8. &emsp; The accused is having permanent abode, is a peace-loving citizen, and has deep roots in the
+                society, with no bad antecedents.</p>
+            <p>WHEREFORE, the accused prays that this Hon'ble court may be pleased to allow the application and
+                release the accused persons on bail, in the above said case, in the interest of justice.</p>
+        </div>
+        <div id="content2" class="content" style="display: none;">
+            <p>IN THE COURT OF THE </p>
+            <p class="CourtName"> </p>
+            <p>Case Number </p>
+            <p class="CCNO"> </p>
+            <p><b>COMPLAINANT;</b></p>
+            <p> <label for="" class="CFROM"></label> <b>V/S</b> <label for="" class="CTO"></label> </p>
+
+            <p><b>ACCUSED;</b></p>
+            <p><b>UNDER SECTION 437 OF THE CODE OF CRIMINAL PROCEDURE</b></p>
+            <p>PROCEDURE, the above named accused most respectfully submits as follows:</p>
+            <p>That the complainant police have registered a case against the accused for an alleged offence
+                punishable under section (SECTION NUMBER)</p>
+            <p>2. &emsp; That the accused is innocent of the said offence and has got valid and tenable defense.</p>
+            <p>3. &emsp; That the accused have been falsely implicated in the alleged offence at the instance of the
+                persons who are inimically disposed towards the accused.</p>
+            <p>4. &emsp; The accused is a peace-loving and law-abiding citizen and has no bad antecedents. Further,
+                the alleged offence is neither punishable with death nor imprisonment for life.</p>
+            <p>5. &emsp; The accused are permanent residents and will neither abscond nor delay the proceedings.</p>
+            <p>6. &emsp; The accused is ready and willing to abide by any condition or conditions that may be
+                imposed by this Hon'ble Court, in the event of allowing this application. Further, the accused is
+                ready to offer solvent surety to the satisfaction of this Hon'ble court for the due appearance.</p>
+            <p>WHEREFORE, the accused prays that this Hon'ble Court be pleased to enlarge the accused on bail, in
+                the interest of justice and equity.</p>
+        </div>
+        <button id="downloadPdfBtn">Download as PDF</button>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script>
+<script src="{% static 'application/js/application.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+{% endblock %}
+<body>
+    
+    
+   
+</body>
+

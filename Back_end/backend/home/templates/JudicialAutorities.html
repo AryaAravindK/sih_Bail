@@ -1,0 +1,150 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'judAuth/css/JudicialAutorities.css'%}">
+
+{% endblock %}
+
+
+{% block title %}
+Judicial Authorities
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="left-column">
+        <h2>
+            <center>Enter Details</center>
+        </h2>
+        <form id="bailForm">
+            <div>
+                <label for="crime">Crime Committed:</label>
+                <input list="crime-options" id="crime" name="crime" placeholder="Type or select a crime">
+                <datalist id="crime-options"></datalist>
+            </div>
+
+            <div>
+                <label for="criminal-record">Past Criminal Record:</label>
+                <select id="criminal-record" name="criminal-record">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+            <div id="past-crime-details" style="display:none;">
+                <label for="direct-involvement">Directly Involved in Crime:</label>
+                <select id="direct-involvement" name="direct-involvement">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            <br>
+                <label for="past-crime">Past Crime Involved (if any):</label>
+                <input list="crime-options" id="past-crime" name="past-crime" placeholder="Type or select a crime">
+            </div>
+
+            <div>
+                <label for="evidence">Rating of Evidence in Favor (0-10):</label>
+                <input type="number" id="evidence" name="evidence" min="0" max="10">
+            </div>
+
+            <div>
+                <label for="visa">Has Visa/Passport:</label>
+                <select id="visa" name="visa">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="foreign-ties">Strong Foreign Country Ties:</label>
+                <select id="foreign-ties" name="foreign-ties">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+
+            <div class="personal-info">
+                <h3>Personal Circumstances</h3>
+                <div id="age-gen">
+                    <div id="age">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age">
+                    </div>
+                    <div id="gender">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="medical-condition">Any Medical Condition(None if not):</label>
+                    <input list="medical-options" id="medical-condition" name="medical-condition"
+                        placeholder="Type or select a condition">
+                    <datalist id="medical-options"></datalist>
+                </div>
+
+
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <div class="right-column">
+        <div class="top-row">
+            <h2>
+                <center>Result</center>
+            </h2>
+            <div id="result" style="display:none;">
+                <p id="bail-decision"></p>
+                <p id="bail-probability"></p>
+                <p id="bail-reason"></p>
+            </div>
+        </div>
+
+        <div class="bottom-row">
+            <h2>
+                Similar Cases
+            </h2>
+            <button class="dropdown-btn" onclick="toggleDropdown()">Show Cards</button>
+
+            <div class="dropdown-content" id="dropdown-content">
+                <div class="card">
+                    <h3>Card 1</h3>
+                    <p>This is card 1 content.</p>
+                </div>
+                <div class="card">
+                    <h3>Card 2</h3>
+                    <p>This is card 2 content.</p>
+                </div>
+                <div class="card">
+                    <h3>Card 3</h3>
+                    <p>This is card 3 content.</p>
+                </div>
+                <div class="card">
+                    <h3>Card 4</h3>
+                    <p>This is card 4 content.</p>
+                </div>
+                <div class="card">
+                    <h3>Card 5</h3>
+                    <p>This is card 5 content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="{% static 'judAuth/js/JudicialAutorities.js'%}"></script>
+<script>
+    function toggleDropdown() {
+        const dropdownContent = document.getElementById('dropdown-content');
+        dropdownContent.classList.toggle('open');
+    }
+</script>
+
+{% endblock %}

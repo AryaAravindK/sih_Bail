@@ -11,8 +11,11 @@
       home
     {% endblock  %}
 </title>
+  {% block links %}
+  
+  {% endblock %}
+  
   <link rel="stylesheet" href="{% static 'home/style.css' %}">
-  {% block links %}{% endblock %}
 
 
 </head>
@@ -29,22 +32,31 @@
             <li class="nav-link"><a href="#">Contact us</a></li>
         </ul>
     </nav>
-
+{% comment %} ---------------------------------content--------------------------------------------------------------------------- {% endcomment %}
     {% block content %}
     <h1>Home Page</h1>
     {% endblock %}
 
 
-    <div class="Chatbot-container">
+    <div class="Chatbot-container" id="toggle-chatbot" >
       CB
+
+
       </div>
-      {% comment %} {% include 'chatbot/_chatbot_widget.html' %} {% endcomment %}
+
+      
+      {% include 'chatbot/_chatbot_widget.html' %}
 
     <footer class="footer">
       <span>Copyrights reserved by @ 2024 TeamNirvana</span>
     </footer>
 
-    
+
+     <script>
+        
+      
+     
+    </script>
 
 
 </body>

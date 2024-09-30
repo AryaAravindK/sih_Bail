@@ -43,4 +43,12 @@ def working(request):
 
 def test(request):
     return render(request,"test.html")
+
+
+def appln(request):
+    #handle download file later
+    return render(request,'application.html')
+
+def predictor(request):
+    return render(request,'JudicialAutorities.html')
                
